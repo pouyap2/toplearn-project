@@ -28,7 +28,7 @@ const SidebarTabs = ({value, handleChange,setDrawerOpen})=>{
             onChange={handleChange}
             TabIndicatorProps={{
                 style:{
-                    backgroundColor:"tomato"
+                    backgroundColor:"blue"
                 }
             }}
             sx={{width: "100%"}}
