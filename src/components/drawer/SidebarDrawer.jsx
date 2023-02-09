@@ -1,7 +1,12 @@
 import {Drawer} from "@mui/material";
 import {SidebarContent} from "../sidebar";
 
-const SidebarDrawer = ({drawerOpen,setDrawerOpen,handleChange,value})=>{
+import  {useContext} from "react";
+import MainContext from '../../context';
+
+const SidebarDrawer = ()=>{
+
+    const {drawerOpen,setDrawerOpen} =useContext(MainContext);
 
     return (
         <Drawer
@@ -19,7 +24,7 @@ const SidebarDrawer = ({drawerOpen,setDrawerOpen,handleChange,value})=>{
                 }
             }}
         >
-            <SidebarContent value={value} handleChange={handleChange} setDrawerOpen={setDrawerOpen}/>
+            <SidebarContent />
         </Drawer>
     )
 }

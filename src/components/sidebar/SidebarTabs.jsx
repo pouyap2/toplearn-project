@@ -8,8 +8,13 @@ import {
     TerminalRounded,
     TextSnippetRounded
 } from "@mui/icons-material";
+import {useContext} from "react";
+import MainContext from "../../context";
 
-const SidebarTabs = ({value, handleChange,setDrawerOpen})=>{
+
+const SidebarTabs = ()=>{
+
+    const {pageNumber,handlePageNumber,setDrawerOpen} = useContext(MainContext);
 
     const tabProps = (index) => {
         return {
@@ -24,8 +29,8 @@ const SidebarTabs = ({value, handleChange,setDrawerOpen})=>{
             variant={"scrollable"}
             scrollButtons={"auto"}
             allowScrollButtonsMobile
-            value={value}
-            onChange={handleChange}
+            value={pageNumber}
+            onChange={handlePageNumber}
             TabIndicatorProps={{
                 style:{
                     backgroundColor:"blue"

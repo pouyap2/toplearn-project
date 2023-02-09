@@ -5,60 +5,72 @@ import ContentContainer from "./ContentContainer";
 import TabPanel from "../components/TabPanel";
 import {Typography} from "@mui/material";
 import SidebarContainer from "./SidebarContainer";
+import MainContext from "../context";
+
 
 function AppContainer() {
-    const [value, setValue] = useState(0);
+    const [pageNumber, setPageNumber] = useState(0);
 
     const [drawerOpen,setDrawerOpen]=useState(false);
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
+    const handlePageNumber = (event, newValue) => {
+        setPageNumber(newValue);
     }
 
     return (
-        <MainLayout>
-            <SidebarContainer>
-                <Sidebar value={value} handleChange={handleChange} drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen}/>
-            </SidebarContainer>
+        <MainContext.Provider
+        value={{
+            pageNumber:pageNumber,
+            handlePageNumber:handlePageNumber,
+            drawerOpen:drawerOpen,
+            setDrawerOpen:setDrawerOpen,
+        }}
+        >
+            <MainLayout>
+                <SidebarContainer>
+                    <Sidebar />
+                </SidebarContainer>
 
-            <ContentContainer>
-                <TabPanel value={value} index={0}>
-                    <Typography variant={"h5"} sx={{textAlign: "center"}}>
-                        صفحه اصلی
-                    </Typography>
-                </TabPanel>
+                <ContentContainer>
+                    <TabPanel pageNumber={pageNumber} index={0}>
+                        <Typography variant={"h5"} sx={{textAlign: "center"}}>
+                            صفحه اصلی
+                        </Typography>
+                    </TabPanel>
 
-                <TabPanel value={value} index={1}>
-                    <Typography variant={"h5"} sx={{textAlign: "center"}}>
-                       درباره من
-                    </Typography>
-                </TabPanel>
+                    <TabPanel pageNumber={pageNumber} index={1}>
+                        <Typography variant={"h5"} sx={{textAlign: "center"}}>
+                            درباره من
+                        </Typography>
+                    </TabPanel>
 
-                <TabPanel value={value} index={2}>
-                    <Typography variant={"h5"} sx={{textAlign: "center"}}>
-                        رزومه من
-                    </Typography>
-                </TabPanel>
+                    <TabPanel pageNumber={pageNumber} index={2}>
+                        <Typography variant={"h5"} sx={{textAlign: "center"}}>
+                            رزومه من
+                        </Typography>
+                    </TabPanel>
 
-                <TabPanel value={value} index={3}>
-                    <Typography variant={"h5"} sx={{textAlign: "center"}}>
-                        نمونه کارها
-                    </Typography>
-                </TabPanel>
+                    <TabPanel pageNumber={pageNumber} index={3}>
+                        <Typography variant={"h5"} sx={{textAlign: "center"}}>
+                            نمونه کارها
+                        </Typography>
+                    </TabPanel>
 
-                <TabPanel value={value} index={4}>
-                    <Typography variant={"h5"} sx={{textAlign: "center"}}>
-                        نظرات دانشجویان
-                    </Typography>
-                </TabPanel>
+                    <TabPanel pageNumber={pageNumber} index={4}>
+                        <Typography variant={"h5"} sx={{textAlign: "center"}}>
+                            نظرات دانشجویان
+                        </Typography>
+                    </TabPanel>
 
-                <TabPanel value={value} index={5}>
-                    <Typography variant={"h5"} sx={{textAlign: "center"}}>
-                        ارتباط با من
-                    </Typography>
-                </TabPanel>
-            </ContentContainer>
-        </MainLayout>
+                    <TabPanel pageNumber={pageNumber} index={5}>
+                        <Typography variant={"h5"} sx={{textAlign: "center"}}>
+                            ارتباط با من
+                        </Typography>
+                    </TabPanel>
+                </ContentContainer>
+            </MainLayout>
+        </MainContext.Provider>
+
     );
 }
 

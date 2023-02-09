@@ -1,16 +1,16 @@
 import {SidebarContent} from ".";
 import {SidebarDrawer,DrawerActionButton} from "../drawer/";
 
-const Sidebar =({value,handleChange,drawerOpen,setDrawerOpen})=>{
+const Sidebar =()=>{
 
     return(
         <>
-            <DrawerActionButton setDrawerOpen={setDrawerOpen} />
+            <DrawerActionButton />
 
-            <SidebarContent value={value} handleChange={handleChange}/>
+            <SidebarContent />
 
 
-            <SidebarDrawer drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} handleChange={handleChange} value={value} />
+            <SidebarDrawer />
 
         </>
     )
