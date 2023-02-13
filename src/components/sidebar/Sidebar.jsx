@@ -1,17 +1,13 @@
 import {SidebarContent} from ".";
-import {SidebarDrawer,DrawerActionButton} from "../drawer/";
+import {SidebarDrawer} from "../drawer/";
 
 const Sidebar =()=>{
 
     return(
         <>
-            <DrawerActionButton />
-
             <SidebarContent />
 
-
             <SidebarDrawer />
-
         </>
     )
 }
