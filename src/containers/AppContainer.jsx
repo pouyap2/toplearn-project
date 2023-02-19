@@ -3,13 +3,13 @@ import MainLayout from "../layouts/MainLayout";
 import {Sidebar} from "../components/sidebar";
 import PagesContainer from "./PagesContainer";
 import Page from "../pages/components/Page";
-import {Box, Typography} from "@mui/material";
+import {Typography} from "@mui/material";
 import SidebarContainer from "./SidebarContainer";
 import MainContext from "../context";
 import {DrawerActionButton} from "../components/drawer";
 import SwipeableViews from 'react-swipeable-views';
 
-import bg02 from '../assets/bg02.jpeg';
+import {Home,About} from "../pages";
 
 function AppContainer() {
     const [pageNumber, setPageNumber] = useState(0);
@@ -42,23 +42,11 @@ function AppContainer() {
                         onChangeIndex={handlePageNumber}
                     >
                         <Page pageNumber={pageNumber} index={0}>
-                            <Box sx={{
-                                backgroundImage:`url(${bg02})`,
-                                backgroundPosition:"center",
-                                backgroundSize:"cover",
-                                backgroundRepeat:"no-repeat",
-                                height:"100vh",
-                            }}>
-                                <Typography variant={"h5"} sx={{textAlign: "center",color:"whitesmoke"}}>
-                                    صفحه اصلی
-                                </Typography>
-                            </Box>
+                          <Home/>
                         </Page>
 
                         <Page pageNumber={pageNumber} index={1}>
-                            <Typography variant={"h5"} sx={{textAlign: "center"}}>
-                                درباره من
-                            </Typography>
+                          <About/>
                         </Page>
 
                         <Page pageNumber={pageNumber} index={2}>

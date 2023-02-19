@@ -10,7 +10,7 @@ export const index = createTheme({
         },
         secondary: {
             main: "#bd93f9",
-        }
+        },
     },
     typography: {
         fontFamily: "IRANSansX,roboto",

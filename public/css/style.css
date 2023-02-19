@@ -29,6 +29,25 @@ body{
     padding: 0;
 }
 
+
+.MuiCard-root::-webkit-scrollbar{
+    width: 5px;
+}
+
+.MuiCard-root::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.MuiCard-root::-webkit-scrollbar-thumb{
+    background: rgba(77, 74, 74, 0.15);
+    border-radius: 10px;
+}
+
+.MuiCard-root::-webkit-scrollbar-thumb:hover{
+    background: rgba(69, 71, 73, 0.46);
+}
+
 .Mui-selected{
     background-color: rgba(2, 2, 113, 0.63) !important;
 }
