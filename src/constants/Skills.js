@@ -1,9 +1,4 @@
-import HTMLIcon from "../assets/icons/html5-original.svg";
-import CSS3 from "../assets/icons/css3-original.svg";
-import GIT from "../assets/icons/git-original.svg";
-import JS from "../assets/icons/javascript-original.svg";
-import ReactIcon from "../assets/icons/react-original.svg";
-import NodeJS from "../assets/icons/nodejs-original.svg";
+import {HTMLIcon,CSS3,GIT,JS,ReactIcon,NodeJS,PHPIcon,LaravelIcon} from '../assets/icons'
 
 export const devSkills={
     htmlSkill:{
@@ -47,5 +42,18 @@ export const devSkills={
         icon:GIT,
         color:"orange",
 
+    },
+    phpSkill:{
+        id:6,
+        name:"PHP",
+        icon:PHPIcon,
+        color:"blue",
+
+    },
+    laravelSkill:{
+        id:7,
+        name:"Laravel",
+        icon:LaravelIcon,
+        color:"orange",
     },
 }

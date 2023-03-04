@@ -5,4 +5,5 @@ export default createContext({
     handlePageNumber:()=>{},
     drawerOpen:false,
     setDrawerOpen:()=>{},
+    handleThemeChange:()=>{},
 });

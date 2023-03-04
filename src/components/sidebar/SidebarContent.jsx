@@ -11,7 +11,7 @@ const SidebarContent = () => {
             <SidebarHeader />
 
 
-            <Divider variant={"middle"} sx={{height: "1%", width: "90%", mt: 1}}/>
+            <Divider variant={"middle"} sx={{height: "1%", width: "90%", mb: 1}}/>
 
 
             <SidebarTabs />
@@ -25,13 +25,3 @@ const SidebarContent = () => {
 }
 
 export default SidebarContent;
-/*
-<Tab label={
-    <div>
-        <Typography variant={"subtitle2"} color={"whitesmoke"}>
-            <HomeRounded sx={{verticalAlign: "middle", mx: 1}}/>
-            خانه
-        </Typography>
-    </div>
-}
-/>*/

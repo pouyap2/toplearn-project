@@ -20,6 +20,16 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Tanha";
+    src: url("../fonts/Tanha.eot") format("eot"),
+    url("../fonts/Tanha.woff") format("woff"),
+    url("../fonts/Tanha.woff2") format("woff2"),
+    url("../fonts/Tanha.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     scroll-behavior: smooth;
 }
@@ -51,3 +61,4 @@ body{
 .Mui-selected{
     background-color: rgba(2, 2, 113, 0.63) !important;
 }
+
