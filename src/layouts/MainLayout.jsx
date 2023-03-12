@@ -23,7 +23,6 @@ const MainLayout = ({children, mode}) => {
         <CacheProvider value={CacheRTL}>
             <ThemeProvider theme={theme}>
                 <HelmetProvider>
-                    {/* Grid System */}
                     <Grid container sx={{height: "100vh"}}>
                         {children}
                     </Grid>

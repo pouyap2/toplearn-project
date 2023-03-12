@@ -2,14 +2,13 @@ import {useEffect, useState} from "react";
 import MainLayout from "../layouts/MainLayout";
 import {Sidebar} from "../components/sidebar";
 import PagesContainer from "./PagesContainer";
-import Page from "../pages/components/Page";
-import {Typography,useMediaQuery} from "@mui/material";
+import {Page} from "../components/pages";
+import {useMediaQuery} from "@mui/material";
 import {useTheme} from "@mui/material";
 import SidebarContainer from "./SidebarContainer";
 import MainContext from "../context";
 import {DrawerActionButton} from "../components/drawer";
 import SwipeableViews from 'react-swipeable-views';
-
 import {Home,About,Resume,Portfolio,Comments,ContactUs} from "../pages";
 
 
@@ -90,7 +89,6 @@ function AppContainer() {
                 </PagesContainer>
             </MainLayout>
         </MainContext.Provider>
-
     );
 }
 

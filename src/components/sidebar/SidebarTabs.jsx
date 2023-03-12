@@ -2,7 +2,7 @@ import {Tab, Tabs} from "@mui/material";
 import {grey} from "@mui/material/colors";
 import {useContext} from "react";
 import MainContext from "../../context";
-import {tabsData} from '../data/tabsData.sidebar';
+import {tabsData} from '../../constants/TabsData';
 import {useTheme} from "@mui/material";
 
 const SidebarTabs = ()=>{

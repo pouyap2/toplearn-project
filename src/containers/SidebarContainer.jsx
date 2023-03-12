@@ -1,4 +1,4 @@
-import {grey,amber} from "@mui/material/colors";
+import {grey} from "@mui/material/colors";
 import {Grid} from "@mui/material";
 import {useTheme} from "@mui/material";
 
