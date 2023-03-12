@@ -45,7 +45,7 @@ const Resume = ({helmet}) => {
                         text={"رزومه من"}
                     />
                     <Grid container sx={{mt: 4}}>
-                        <Grid xs={6}>
+                        <Grid xs={12} sm={12} md={6}>
                             <CustomDivider
                                 bColor={"warning.main"}
                                 cColor={"warning"}
@@ -57,7 +57,7 @@ const Resume = ({helmet}) => {
                            <DevExpTimeline loading={loading} theme={theme} />
                         </Grid>
 
-                        <Grid xs={6}>
+                        <Grid xs={12} sm={12} md={6}>
                             <CustomDivider
                                 bColor={"error.main"}
                                 cColor={"error"}

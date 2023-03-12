@@ -11,10 +11,10 @@ const DevEduTimeline = ({loading,theme})=>{
     return(
         <Timeline position={"alternate"} sx={{direction:"ltr"}}>
             {devEdu.map((item, index) => (
-                <Slide direction={"up"} in={loading} style={{
+                <Slide  key={index} direction={"up"} in={loading} style={{
                     transitionDelay:loading ? `${500+(index*300)}ms` : "0ms"
                 }}>
-                    <TimelineItem key={index}>
+                    <TimelineItem>
                         <TimelineSeparator>
                             <TimelineDot color={"info"} variant={"outlined"}>
                                 <SchoolRounded color={"info"}/>

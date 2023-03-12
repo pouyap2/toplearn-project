@@ -10,10 +10,10 @@ const DevExpTimeline = ({loading,theme})=>{
     return (
         <Timeline position={"alternate"} sx={{direction:"ltr"}}>
             {devEdu.map((item, index) => (
-                <Slide direction={"up"} in={loading} style={{
+                <Slide  key={index} direction={"up"} in={loading} style={{
                     transitionDelay:loading ? `${1500+(index*500)}ms` : "0ms",
                 }}>
-                    <TimelineItem key={index}>
+                    <TimelineItem>
                         <TimelineSeparator>
                             <TimelineDot color={"warning"} variant={"outlined"}>
                                 <HomeRepairServiceRounded color={"warning"}/>

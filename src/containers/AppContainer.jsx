@@ -16,6 +16,7 @@ function AppContainer() {
     const [pageNumber, setPageNumber] = useState(0);
     const [drawerOpen,setDrawerOpen]=useState(false);
     const [mode,setMode]=useState();
+    const [bgColor,setBgColor]=useState("#1e1e1e");
 
     const theme=useTheme();
     const isMdUp=useMediaQuery(theme.breakpoints.up("md"));
@@ -36,8 +37,13 @@ function AppContainer() {
         setPageNumber(newValue);
     };
 
+    const handlePageChange=index =>{
+        setPageNumber(index);
+    }
+
     const handleThemeChange = ()=>{
         setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+        setBgColor((prevBgColor)=>(prevBgColor === '#1e1e1e' ? "whitesmoke" : "#1e1e1e"))
     }
 
     return (
@@ -60,7 +66,8 @@ function AppContainer() {
                 <PagesContainer>
                     <SwipeableViews
                         index={pageNumber}
-                        onChangeIndex={handlePageNumber}
+                        onChangeIndex={handlePageChange}
+                        style={{background:bgColor}}
                     >
                         <Page pageNumber={pageNumber} index={0}>
                           <Home helmet={"وب سایت شخصی - صفحه اصلی"}/>
